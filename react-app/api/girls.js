@@ -13,10 +13,8 @@ export default async function handler(req, res) {
                 { id: 2, name: "Orália" },
                 { id: 3, name: "Anasztázia" },
             ];
-            return res.status(200).json(data);
+            return res.status(200).json({result: data});
             
-            return res.status(200).json("OK")
-        
         default:
             return res.status(405).json({ error: "Method not allowed" });
     }
